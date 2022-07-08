@@ -1,4 +1,4 @@
-import { InvalidVoError } from "../../../errors/invalid-vo.error";
+import { InvalidVoError } from "../../errors/invalid-vo.error";
 import ValueObject from "../value-object";
 
 class StubValueObject extends ValueObject {}

@@ -1,4 +1,4 @@
-import { InvalidVoError } from "../../errors/invalid-vo.error";
+import { InvalidVoError } from "../errors/invalid-vo.error";
 import { deepFreeze } from "../utils/object";
 
 export default abstract class ValueObject<Value = any> {
