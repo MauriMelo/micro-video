@@ -27,8 +27,6 @@ export class Category extends Entity<CategoryProperties> {
       is_active: this.props.is_active,
     });
 
-    ValidatorRules.values(name, 'name').required().string();
-    ValidatorRules.values(description, 'description').string();
     this.props.name = name;
     this.props.description = description ?? null;
   }

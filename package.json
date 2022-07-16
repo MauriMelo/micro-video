@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "ts-node": "ts-node",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "test": "jest",
+    "test:cov": "jest --coverage"
   },
   "author": "",
   "license": "ISC",

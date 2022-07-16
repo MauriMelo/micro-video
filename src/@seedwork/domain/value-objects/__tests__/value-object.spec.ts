@@ -37,6 +37,15 @@ describe('ValueObject', () => {
     })
   });
 
+  it('should trigger InvalidVoError exception when value is undefined or null', () => {
+    expect(() => new StubValueObject(undefined)).toThrowError(
+      new InvalidVoError()
+    );
+    expect(() => new StubValueObject(null)).toThrowError(
+      new InvalidVoError()
+    );
+  });
+
   it('freeze value', () => {
     const vo = new StubValueObject({teste: true});
     expect(() => vo['value'].teste = 'teste').toThrowError(TypeError);

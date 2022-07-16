@@ -11,7 +11,6 @@ export default class CategoryInMemoryRepository
 
   sortableFields: string[] = ['name', 'created_at'];
 
-
   async search(props: SearchParams<string>): Promise<SearchResult<Category, CategoryRepository.Filter>> {
     if (!props.sort) {
       props.sort = CategoryInMemoryRepository.DEFAULT_SORT;

@@ -24,4 +24,15 @@ describe('Object Unit Tests', () => {
     expect(() => (objValueDeep as any).deep.deepProp = false).toThrowError("Cannot assign to read only property 'deepProp' of object '#<Object>'");
     expect(objValueDeep.deep.deepProp).toBeInstanceOf(Date);
   });
+
+  it('should freeze deep object values', () => {
+    let objValue = deepFreeze({ 
+      test: true,
+      children: {
+        value: 1
+      }
+    });
+    expect(() => (objValue as any).children.value = 2).toThrowError("Cannot assign to read only property 'value' of object '#<Object>'");
+    expect(objValue.children.value).toBe(1);
+  });
 })
