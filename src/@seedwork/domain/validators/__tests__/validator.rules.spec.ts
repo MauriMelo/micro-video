@@ -18,7 +18,7 @@ function assertIsvalid({value, property, rule, params, error } : RunRuleProps & 
 
 function runRule({value, property, rule, params = [] } : RunRuleProps) {
   const validator = ValidatorRules.values(value, property);
-  const method = validator[rule];
+  const method = validator[rule] as any;
   method.apply(validator, params)
 }
 
