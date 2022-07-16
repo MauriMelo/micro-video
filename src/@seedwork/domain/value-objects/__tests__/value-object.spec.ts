@@ -41,9 +41,6 @@ describe('ValueObject', () => {
     expect(() => new StubValueObject(undefined)).toThrowError(
       new InvalidVoError()
     );
-    expect(() => new StubValueObject(null)).toThrowError(
-      new InvalidVoError()
-    );
   });
 
   it('freeze value', () => {
